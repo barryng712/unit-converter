@@ -2,12 +2,6 @@
 
 {% block main %}
 <div class="converter-container">
-    <h1 class="converter-title">Unit Converter</h1>
-    <div class="converter-tabs">
-        <a href="{{ url_for('converter', category='length') }}" class="tab">Length</a>
-        <a href="{{ url_for('converter', category='weight') }}" class="tab active">Weight</a>
-        <a href="{{ url_for('converter', category='temperature') }}" class="tab">Temperature</a>
-    </div>
     <form action="{{ url_for('converter', category='weight') }}" method="post" class="converter-form">
         <div class="form-group">
             <label for="value">Enter the weight to convert</label>

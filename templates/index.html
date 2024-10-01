@@ -1,13 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<div class="converter-container">
-    <h1 class="converter-title">Unit Converter</h1>
-    <div class="converter-tabs">
-        <a href="{{ url_for('converter', category='length') }}" class="tab">Length</a>
-        <a href="{{ url_for('converter', category='weight') }}" class="tab">Weight</a>
-        <a href="{{ url_for('converter', category='temperature') }}" class="tab">Temperature</a>
-    </div>
+<div class="converter-container">    
     <p class="welcome-message">Choose a conversion category from the tabs above to get started.</p>
 </div>
 {% endblock %}

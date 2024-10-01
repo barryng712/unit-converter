@@ -2,12 +2,6 @@
 
 {% block main %}
 <div class="converter-container">
-    <h1 class="converter-title">Unit Converter</h1>
-    <div class="converter-tabs">
-        <a href="{{ url_for('converter', category='length') }}" class="tab">Length</a>
-        <a href="{{ url_for('converter', category='weight') }}" class="tab">Weight</a>
-        <a href="{{ url_for('converter', category='temperature') }}" class="tab">Temperature</a>
-    </div>
     <div class="result-container">
         <h2>Result of your calculation</h2>
         <p class="result">{{ value }} {{ from_unit }} = {{ "%.4f"|format(result) }} {{ to_unit }}</p>

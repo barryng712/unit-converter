@@ -8,6 +8,13 @@
 </head>
 <body>
     <div class="container">
+        <h1 class="converter-title">Unit Converter</h1>
+        <div class="converter-tabs">
+            <a href="{{ url_for('converter', category='length') }}" class="tab {% if category == 'length' %}active{% endif %}">Length</a>
+            <a href="{{ url_for('converter', category='weight') }}" class="tab {% if category == 'weight' %}active{% endif %}">Weight</a>
+            <a href="{{ url_for('converter', category='temperature') }}" class="tab {% if category == 'temperature' %}active{% endif %}">Temperature</a>
+        </div>
+
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}

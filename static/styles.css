@@ -1,74 +1,112 @@
 body { 
-    font-family: Arial, sans-serif; 
-    line-height: 1.6; 
+    font-family: 'Arial', sans-serif; 
+    background-color: #f0f0f0; 
     margin: 0; 
     padding: 20px; 
-    background-color: #f0f0f0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
 }
+
 .container { 
-    max-width: 600px; 
-    margin: 0 auto; 
-}
-.converter-container { 
-    background-color: white; 
+    background-color: #ffffff; 
     border-radius: 10px; 
-    padding: 20px; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 30px; 
+    width: 90%; 
+    max-width: 500px; 
 }
+
 .converter-title { 
+    font-size: 24px; 
+    color: #333; 
     text-align: center; 
+    margin-top: 0; 
     margin-bottom: 20px; 
 }
+
 .converter-tabs { 
     display: flex; 
     justify-content: space-between; 
     margin-bottom: 20px; 
+    border-bottom: 2px solid #e9ecef; 
+    padding-bottom: 10px; 
 }
+
 .tab { 
     text-decoration: none; 
-    color: #333; 
-    padding: 10px; 
+    color: #495057; 
+    padding: 8px 12px; 
+    border-radius: 5px 5px 0 0; 
+    transition: all 0.3s ease; 
 }
+
+.tab:hover, .tab.active { 
+    color: #007bff; 
+    background-color: #e9ecef; 
+}
+
 .tab.active { 
-    color: blue; 
-    border-bottom: 2px solid blue; 
+    border-bottom: 3px solid #007bff; 
 }
-.converter-form { 
-    display: flex; 
-    flex-direction: column;
+
+main { 
+    margin-top: 20px; 
 }
-.form-group { 
-    margin-bottom: 15px; 
-}
-label { 
+
+form label { 
     display: block; 
-    margin-bottom: 5px; 
+    margin-bottom: 8px; 
+    color: #495057; 
+    font-weight: bold; 
 }
-input, select { 
+
+form input, form select { 
     width: 100%; 
-    padding: 8px; 
-    border: 1px solid #ddd; 
-    border-radius: 4px; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ced4da; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
 }
-.convert-btn, .reset-btn { 
+
+form input:focus, form select:focus { 
+    outline: none; 
+    border-color: #80bdff; 
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); 
+}
+
+button { 
     background-color: #007bff; 
     color: white; 
     border: none; 
-    padding: 10px; 
-    border-radius: 4px; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
     cursor: pointer; 
+    font-size: 16px; 
+    width: 100%; 
 }
-.convert-btn:hover, .reset-btn:hover { 
+
+button:hover { 
     background-color: #0056b3; 
 }
-.result-container { 
-    text-align: center; 
-}
+
 .result { 
-    font-size: 24px; 
-    font-weight: bold; 
-    margin: 20px 0; 
-}
-.welcome-message { 
+    margin-top: 20px; 
+    font-size: 18px; 
     text-align: center; 
+    padding: 15px; 
+    background-color: #e9ecef; 
+    border-radius: 5px; 
+}
+
+.reset-button { 
+    background-color: #6c757d; 
+    margin-top: 15px; 
+}
+
+.reset-button:hover { 
+    background-color: #545b62; 
 }
