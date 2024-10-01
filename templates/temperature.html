@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="converter-container">
+    <h1 class="converter-title">Unit Converter</h1>
+    <div class="converter-tabs">
+        <a href="{{ url_for('converter', category='length') }}" class="tab">Length</a>
+        <a href="{{ url_for('converter', category='weight') }}" class="tab">Weight</a>
+        <a href="{{ url_for('converter', category='temperature') }}" class="tab active">Temperature</a>
+    </div>
+    <form action="{{ url_for('converter', category='temperature') }}" method="post" class="converter-form">
+        <div class="form-group">
+            <label for="value">Enter the temperature to convert</label>
+            <input type="number" step="any" name="value" id="value" required>
+        </div>
+        <div class="form-group">
+            <label for="from">Unit to Convert from</label>
+            <select name="from" id="from">
+                {% for unit in units %}
+                    <option value="{{ unit }}">{{ unit.capitalize() }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="to">Unit to Convert to</label>
+            <select name="to" id="to">
+                {% for unit in units %}
+                    <option value="{{ unit }}">{{ unit.capitalize() }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="convert-btn">Convert</button>
+    </form>
+</div>
+{% endblock %}
